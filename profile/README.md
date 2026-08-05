@@ -1,13 +1,10 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/deskplan/brand/main/logo.svg" alt="DeskPlan" width="112" height="112">
+  <img src="https://raw.githubusercontent.com/deskplan/brand/main/logo.svg" alt="DeskPlan" width="96" height="96">
 </p>
 
 <h1 align="center">DeskPlan</h1>
 
-<p align="center">
-  <em>Gestion du personnel et des bureaux des laboratoires —<br>
-  une API Go, un client web et une application macOS native, à parité.</em>
-</p>
+<p align="center">Gestion du personnel et des bureaux des laboratoires.</p>
 
 <p align="center">
   <a href="https://deskplan.github.io/">Site</a> ·
@@ -17,31 +14,36 @@
 
 ---
 
-**DeskPlan** aide les laboratoires (CPHT, CMLS…) à tenir à jour **qui travaille où** : annuaire du personnel, plans de bureaux interactifs, arrivées et départs, taux d'occupation — le tout **multi-laboratoire**, avec des données strictement cloisonnées par labo.
+DeskPlan tient à jour, pour un ou plusieurs laboratoires, **qui travaille où** : annuaire du personnel, plans d'occupation des bureaux, arrivées et départs. Les données sont **cloisonnées par laboratoire**.
 
-Une même API sert **deux clients à parité** : un client web et une application macOS native.
+Une même API sert deux clients maintenus à parité : un client web et une application macOS native.
 
-## Composants
+## Dépôts
 
-| Dépôt | Rôle | Stack |
+| Dépôt | Rôle | Technologies |
 |---|---|---|
-| **server-go** | API + logique métier + service des clients | Go · Huma v2 · PostgreSQL |
-| **web** | Client web | SvelteKit · TypeScript · Tailwind |
-| **macos** | Application de bureau native | SwiftUI |
-| [**docs**](https://github.com/deskplan/docs) | Documentation | MkDocs Material → [Pages](https://deskplan.github.io/docs/) |
+| **server-go** | API et logique métier | Go · Huma v2 · PostgreSQL |
+| **web** | Client web | SvelteKit · TypeScript |
+| **macos** | Application de bureau | SwiftUI |
+| [**docs**](https://github.com/deskplan/docs) | Documentation ([en ligne](https://deskplan.github.io/docs/)) | MkDocs Material |
 | [**brand**](https://github.com/deskplan/brand) | Logo, couleurs, iconographie | SVG · PNG |
 
 ## Fonctionnalités
 
-- **Annuaire** du personnel (statuts, groupes, nationalités, dates d'arrivée/départ).
-- **Plans de bureaux** interactifs : affectation par glisser-déposer, occupation, places libres à une date.
-- **Checklists** d'arrivée et de départ, journal d'audit des modifications.
-- **Interroger** : questions en langage naturel traduites en requêtes (IA), cloisonnées par labo.
-- **Import / export Excel** du personnel, modèle fourni.
-- **Authentification** LDAP ou comptes locaux, 2FA (clé de sécurité / code e-mail), rôles fins par labo.
+- Annuaire du personnel : statut, groupe, nationalités, dates de contrat.
+- Plans des bureaux : affectation, taux d'occupation, places libres à une date.
+- Arrivées et départs : listes de tâches, journal des modifications.
+- Interrogation des données en langage naturel, cloisonnée par laboratoire.
+- Import et export Excel du personnel.
+- Authentification LDAP ou comptes locaux, double authentification, rôles par laboratoire.
 
 ## Accès
 
 L'instance de production est réservée aux laboratoires participants. La documentation d'utilisation et d'administration est publique : **<https://deskplan.github.io/docs/>**.
 
-<sub>Développé par l'<strong>IDCS — École polytechnique</strong>.</sub>
+---
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/deskplan/brand/main/idcs-logo.png" alt="IDCS Research Facilities" height="40">
+</p>
+<p align="center"><sub>Développé par l'<strong>IDCS</strong> — École polytechnique.</sub></p>
